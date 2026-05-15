@@ -1,749 +1,1103 @@
 <!DOCTYPE html>
 <html lang="hu">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ElectricBau - Professzionális villanyszerelési szolgáltatások</title>
-<script src="https://cdn.tailwindcss.com/3.4.16"></script>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#3563E9',secondary:'#F97316'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-body {
-font-family: 'Inter', sans-serif;
-}
-.search-input:focus {
-outline: none;
-}
-.custom-checkbox {
-appearance: none;
--webkit-appearance: none;
-width: 20px;
-height: 20px;
-border: 2px solid #d1d5db;
-border-radius: 4px;
-position: relative;
-cursor: pointer;
-}
-.custom-checkbox:checked {
-background-color: #3563E9;
-border-color: #3563E9;
-}
-.custom-checkbox:checked::after {
-content: '';
-position: absolute;
-left: 6px;
-top: 2px;
-width: 5px;
-height: 10px;
-border: solid white;
-border-width: 0 2px 2px 0;
-transform: rotate(45deg);
-}
-.masonry-grid {
-column-count: 3;
-column-gap: 1rem;
-}
-.masonry-grid-item {
-break-inside: avoid;
-margin-bottom: 1rem;
-}
-.lightbox {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.9);
-z-index: 1000;
-justify-content: center;
-align-items: center;
-}
-.lightbox-content {
-max-width: 90%;
-max-height: 90%;
-}
-.lightbox-close {
-position: absolute;
-top: 20px;
-right: 20px;
-color: white;
-font-size: 30px;
-cursor: pointer;
-}
-</style>
-</head>
-<body class="bg-gray-50">
-<!-- Header & Navigation -->
-<header class="bg-white shadow-sm sticky top-0 z-50">
-<div class="container mx-auto px-4 flex items-center justify-between h-20">
-<div class="flex items-center">
-<div>
-    <p><img src="Ebau im.png" width="200" height="150"></p>
-    <p class="text-center">Alapítva 1992</p>
-</div>
-</div>
-<nav class="hidden md:flex items-center space-x-8">
-    <div>
-        <p class="font-medium text-gray-800 hover:text-primary transition">
-          Innováció és megbízhatóság
-        </p>
-</div>
-<a href="#fooldal" class="font-medium text-gray-800 hover:text-primary transition">Főoldal</a>
-<a href="#cegrol" class="font-medium text-gray-800 hover:text-primary transition">Magunkról</a>
-<a href="#szolgaltatasok" class="font-medium text-gray-800 hover:text-primary transition">Termékek, szolgáltatások</a>
-<a href="#referenciak" class="font-medium text-gray-800 hover:text-primary transition">Referenciák</a>
-<a href="#kapcsolat" class="font-medium text-gray-800 hover:text-primary transition">Kapcsolat</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C.Electricbau Zrt. - Villanyszerelési megoldások profiktól</title>
+    <link rel="icon" href="assets/logopici.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0061A1",
+              secondary: "#FFA500",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
+  <body class="font-sans text-gray-800">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 flex items-center justify-between h-20"
+      >
+        <div class="flex items-center">
+          <div>
+            <p>
+              <img
+                src="assets/nagylogo.png"
+                width="200"
+                height="150"
+                alt="Logo"
+              />
+            </p>
+            <p data-translate="since" class="text-center">Alapítva 1992</p>
+          </div>
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a
+            href="#home"
+            data-translate="home"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Főoldal</a
+          >
+          <a
+            href="#services"
+            data-translate="services"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Szolgáltatások</a
+          >
+          <a
+            href="#about"
+            data-translate="about"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Rólunk</a
+          >
+          <a
+            href="#references"
+            data-translate="references"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Referenciák</a
+          >
+          <a
+            href="#contact"
+            data-translate="contact"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Kapcsolat</a
+          >
+          <div
+            class="flex items-center space-x-2 ml-4 border-l pl-4 border-gray-200"
+          >
+            <a
+              href="#"
+              class="language-switch text-primary font-medium"
+              data-lang="hu"
+              >HU</a
+            >
+            <span class="text-gray-300">|</span>
+            <a
+              href="#"
+              class="language-switch text-gray-400 hover:text-primary font-medium"
+              data-lang="en"
+              >EN</a
+            >
+          </div>
+        </nav>
+        <button
+          class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700"
+          id="mobile-menu-button"
+        >
+          <i class="ri-menu-line ri-2x"></i>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a
+            href="#home"
+            data-translate="home"
+            class="text-gray-800 hover:text-primary font-medium py-2"
+            >Főoldal</a
+          >
+          <a
+            href="#services"
+            data-translate="services"
+            class="text-gray-800 hover:text-primary font-medium py-2"
+            >Szolgáltatások</a
+          >
+          <a
+            href="#about"
+            data-translate="about"
+            class="text-gray-800 hover:text-primary font-medium py-2"
+            >Rólunk</a
+          >
+          <a
+            href="#references"
+            data-translate="references"
+            class="text-gray-800 hover:text-primary font-medium py-2"
+            >Referenciák</a
+          >
+          <a
+            href="#contact"
+            data-translate="contact"
+            class="text-gray-800 hover:text-primary font-medium py-2"
+            >Kapcsolat</a
+          >
+          <div
+            class="flex items-center space-x-2 py-2 border-t border-gray-200"
+          >
+            <a
+              href="#"
+              class="language-switch text-primary font-medium"
+              data-lang="hu"
+              >HU</a
+            >
+            <span class="text-gray-300">|</span>
+            <a
+              href="#"
+              class="language-switch text-gray-400 hover:text-primary font-medium"
+              data-lang="en"
+              >EN</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
 
-</nav>
-<div class="flex items-center">
-<div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-2">
-<div class="w-5 h-5 flex items-center justify-center mr-2">
-<i class="ri-search-line text-gray-500"></i>
-</div>
-<input type="text" placeholder="Keresés..." class="bg-transparent border-none search-input text-sm w-40">
-</div>
-<button class="md:hidden w-10 h-10 flex items-center justify-center">
-<i class="ri-menu-line text-xl"></i>
-</button>
-</div>
-</div>
-</header>
-<!-- Mobile Menu (Hidden by default) -->
-<div class="hidden fixed inset-0 bg-white z-50 p-4" id="mobile-menu">
-<div class="flex justify-between items-center mb-8">
-<a href="#" class="font-['Pacifico'] text-2xl text-primary">ElectricBau</a>
-<button class="w-10 h-10 flex items-center justify-center" id="close-menu">
-<i class="ri-close-line text-xl"></i>
-</button>
-</div>
-<nav class="flex flex-col space-y-6">
-<a href="#fooldal" class="font-medium text-gray-800 hover:text-primary transition text-lg">Főoldal</a>
-<a href="#cegrol" class="font-medium text-gray-800 hover:text-primary transition">Magunkról</a>
-<a href="#szolgaltatasok" class="font-medium text-gray-800 hover:text-primary transition text-lg">Szolgáltatások</a>
-<a href="#referenciak" class="font-medium text-gray-800 hover:text-primary transition text-lg">Referenciák</a>
-<a href="#kapcsolat" class="font-medium text-gray-800 hover:text-primary transition text-lg">Kapcsolat</a>
-</nav>
-<div class="mt-8">
-<div class="flex items-center bg-gray-100 rounded-full px-4 py-3">
-<div class="w-5 h-5 flex items-center justify-center mr-2">
-<i class="ri-search-line text-gray-500"></i>
-</div>
-<input type="text" placeholder="Keresés..." class="bg-transparent border-none search-input text-sm w-full">
-</div>
-</div>
-</div>
-<!-- Hero Section -->
-<section id="fooldal" class="relative h-[600px] overflow-hidden">
-<div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40 z-10"></div>
-<div class="absolute inset-0 slideshow">
-<div class="slide active" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20electrician%20working%20on%20electrical%20panel%20with%20tools%2C%20modern%20equipment%2C%20blue%20sparks%2C%20industrial%20setting%2C%20high%20quality%20professional%20photography%2C%20realistic%20lighting&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center;"></div>
-<div class="slide" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20soccer%20field%20at%20night%20with%20multiple%20high-powered%20LED%20floodlights%20mounted%20on%20tall%20poles%20surrounding%20the%20field%2C%20intense%20bright%20white%20illumination%20creating%20dramatic%20lighting%20effects%2C%20crisp%20shadows%20on%20perfectly%20maintained%20green%20turf%2C%20modern%20sports%20facility%20with%20state-of-the-art%20lighting%20system%2C%20ultra-realistic%20night%20scene%20with%20multiple%20light%20sources%20casting%20overlapping%20beams%2C%20professional%20sports%20venue%20lighting&width=1920&height=1080&seq=2&orientation=landscape'); background-size: cover; background-position: center;"></div>
-<div class="slide" style="background-image: url('1920_bvsc-uszoda-23.jpg'); background-size: cover; background-position: center;"></div>
-<div class="slide" style="background-image: url('https://readdy.ai/api/search-image?query=close%20up%20of%20light%20blue%20printed%20circuit%20board%20with%20electronic%20components%2C%20high%20tech%20manufacturing%2C%20blue%20PCB%20with%20silver%20traces%2C%20professional%20electronics%20with%20cool%20tones&width=1920&height=1080&seq=4&orientation=landscape'); background-size: cover; background-position: center;"></div>
-<div class="slide" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20building%20management%20system%20control%20room%2C%20multiple%20monitors%20showing%20HVAC%20controls%2C%20security%20cameras%2C%20and%20energy%20management%20interfaces%2C%20professional%20facility%20automation%20system&width=1920&height=1080&seq=5&orientation=landscape'); background-size: cover; background-position: center;"></div>
-<div class="slide" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20fire%20alarm%20and%20security%20system%20installation%2C%20control%20panel%20with%20red%20emergency%20lights%2C%20smoke%20detectors%20and%20security%20cameras%20mounted%20on%20ceiling%2C%20modern%20safety%20equipment&width=1920&height=1080&seq=6&orientation=landscape'); background-size: cover; background-position: center;"></div>
-</div>
-<div class="container mx-auto px-4 h-full flex items-center relative z-[50]">
-<div class="max-w-2xl">
-<h1 class="text-5xl font-bold text-white mb-6">Professzionális villanyszerelési megoldások</h1>
-<p class="text-xl text-gray-100 mb-8">Több mint 15 éves szakmai tapasztalattal vállaljuk lakások, házak és ipari létesítmények villanyszerelési munkáit. Minőségi munka, megbízható kivitelezés, korrekt árak.</p>
-<button class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 !rounded-button shadow-lg transition whitespace-nowrap">Kapcsolatfelvétel</button>
-</div>
-</div>
-</section>
-<style>
-.slideshow {
-position: relative;
-width: 100%;
-height: 100%;
-z-index: 0;
-}
-.slide {
-position: absolute;
-inset: 0;
-z-index: 5;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.slide.active {
-opacity: 1;
-}
-</style>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-const slides = document.querySelectorAll('.slide');
-let currentSlide = 0;
-function nextSlide() {
-slides[currentSlide].classList.remove('active');
-currentSlide = (currentSlide + 1) % slides.length;
-slides[currentSlide].classList.add('active');
-}
-setInterval(nextSlide, 5000);
-});
-</script>
-<!-- Services Section -->
-<section id="szolgaltatasok" class="py-20 bg-white">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Service 1 -->
-<div class="bg-gray-50 rounded-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center text-primary">
-<i class="ri-flashlight-line ri-xl"></i>
-</div>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">Nyomtatott Áramkör készítése
-</h3>
-<ul class="text-gray-600 space-y-2 mb-6">
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span>  Nyomtatott áramkörök egyedi tervezése
-</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span> Tömeggyártás</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span>  Szerelési és tesztelési szolgáltatások</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<a href="#" class="text-primary font-medium flex items-center hover:underline">
-Részletek
-<div class="w-5 h-5 flex items-center justify-center ml-1">
-<i class="ri-arrow-right-line"></i>
-</div>
-</a>
-</div>
-<!-- Service 2 -->
-<div class="bg-gray-50 rounded-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center text-primary">
-<i class="ri-tools-line ri-xl"></i>
-</div>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">Saját fejlesztésű elektronikai eszközök</h3>
-<ul class="text-gray-600 space-y-2 mb-6">
-  <li class="flex items-start">
-  <div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-  <i class="ri-checkbox-circle-line"></i>
-  </div>
-<span> Tűzjelző központ és tűzjelző rendszerek eszközei</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span> Elosztók gyártása és szállítása</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span> Számítástechnikai rendszerelemek kereskedelme</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span> Vagyonvédelmi berendezések és eszközök</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span> Beléptető- és kamera rendszerek</span>
-</li>
-</ul>
-<a href="#" class="text-primary font-medium flex items-center hover:underline">
-Részletek
-<div class="w-5 h-5 flex items-center justify-center ml-1">
-<i class="ri-arrow-right-line"></i>
-</div>
-</a>
-</div>
-<!-- Service 3 -->
-<div class="bg-gray-50 rounded-lg p-8 transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px] group">
-<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-<div class="w-8 h-8 flex items-center justify-center text-primary">
-<i class="ri-home-gear-line ri-xl"></i>
-</div>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">Felújítás</h3>
-<p class="text-gray-600 mb-4">Elavult elektromos rendszerek korszerűsítése, felújítása. Régi alumínium vezetékek cseréje, biztonsági rendszerek telepítése, energiahatékonyság növelése.</p>
-<ul class="text-gray-600 space-y-2 mb-6">
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span>Régi vezetékek cseréje</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span>Rendszerkorszerűsítés</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
-<i class="ri-checkbox-circle-line"></i>
-</div>
-<span>Energiahatékonyság növelése</span>
-</li>
-</ul>
-<a href="#" class="text-primary font-medium flex items-center hover:underline">
-Részletek
-<div class="w-5 h-5 flex items-center justify-center ml-1">
-<i class="ri-arrow-right-line"></i>
-</div>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- References Section -->
-<section id="referenciak" class="py-20 bg-gray-50">
-<div class="container mx-auto px-4">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Referenciamunkáink</h2>
-<p class="text-gray-600 max-w-2xl mx-auto">Tekintse meg néhány korábbi munkánkat. Büszkék vagyunk a minőségi kivitelezésre és az elégedett ügyfelekre.</p>
-</div>
-<div class="flex justify-center mb-8">
-<div class="inline-flex bg-white p-1 rounded-full shadow-sm">
-<button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white font-medium whitespace-nowrap" data-filter="all">Összes</button>
-<button class="filter-btn px-6 py-2 rounded-full text-gray-700 font-medium whitespace-nowrap" data-filter="lakohaz">Lakóház</button>
-<button class="filter-btn px-6 py-2 rounded-full text-gray-700 font-medium whitespace-nowrap" data-filter="iroda">Iroda</button>
-<button class="filter-btn px-6 py-2 rounded-full text-gray-700 font-medium whitespace-nowrap" data-filter="ipari">Ipari</button>
-</div>
-</div>
-<div class="masonry-grid">
-<!-- Project 1 -->
-<div class="masonry-grid-item gallery-item" data-category="lakohaz">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=modern%20living%20room%20with%20elegant%20lighting%20installation%2C%20warm%20ambient%20light%2C%20contemporary%20interior%20design%2C%20professional%20electrical%20work&width=600&height=400&seq=2&orientation=landscape" alt="Családi ház világítás" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Családi ház világítás</h3>
-<p class="text-sm text-gray-200">Budaörs, 2024</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="masonry-grid-item gallery-item" data-category="iroda">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=modern%20office%20space%20with%20professional%20electrical%20installations%2C%20clean%20cable%20management%2C%20LED%20lighting%2C%20contemporary%20workspace&width=600&height=800&seq=3&orientation=portrait" alt="Irodaház elektromos rendszer" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Irodaház elektromos rendszer</h3>
-<p class="text-sm text-gray-200">Budapest, 2023</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Project 3 -->
-<div class="masonry-grid-item gallery-item" data-category="ipari">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=industrial%20electrical%20panel%20installation%2C%20professional%20wiring%2C%20organized%20cables%2C%20technical%20equipment%2C%20factory%20setting&width=600&height=500&seq=4&orientation=landscape" alt="Ipari elosztószekrény" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Ipari elosztószekrény</h3>
-<p class="text-sm text-gray-200">Győr, 2024</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Project 4 -->
-<div class="masonry-grid-item gallery-item" data-category="lakohaz">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=smart%20home%20electrical%20system%20installation%2C%20home%20automation%20panel%2C%20modern%20technology%2C%20residential%20setting&width=600&height=400&seq=5&orientation=landscape" alt="Okosotthon rendszer" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Okosotthon rendszer</h3>
-<p class="text-sm text-gray-200">Debrecen, 2023</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Project 5 -->
-<div class="masonry-grid-item gallery-item" data-category="iroda">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=conference%20room%20with%20professional%20lighting%20installation%2C%20business%20environment%2C%20modern%20ceiling%20lights%2C%20clean%20electrical%20work&width=600&height=600&seq=6&orientation=squarish" alt="Konferenciaterem világítás" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Konferenciaterem világítás</h3>
-<p class="text-sm text-gray-200">Szeged, 2024</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Project 6 -->
-<div class="masonry-grid-item gallery-item" data-category="ipari">
-<div class="relative rounded-lg overflow-hidden cursor-pointer group">
-<img src="https://readdy.ai/api/search-image?query=warehouse%20electrical%20installation%2C%20industrial%20lighting%20system%2C%20high%20ceiling%20lights%2C%20commercial%20space&width=600&height=450&seq=7&orientation=landscape" alt="Raktárcsarnok világítás" class="w-full h-auto object-cover">
-<div class="absolute inset-0 bg-gray-900/0 group-hover:bg-gray-900/60 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-<div class="text-white text-center p-4">
-<h3 class="font-semibold text-lg">Raktárcsarnok világítás</h3>
-<p class="text-sm text-gray-200">Miskolc, 2023</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox">
-<span class="lightbox-close">&times;</span>
-<img class="lightbox-content" id="lightbox-img">
-</div>
-<!-- Contact Section -->
-<section id="kapcsolat" class="py-20 bg-white">
-<div class="container mx-auto px-4">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Kapcsolat</h2>
-<p class="text-gray-600 max-w-2xl mx-auto">Vegye fel velünk a kapcsolatot és kérjen ingyenes árajánlatot! Munkatársaink 24 órán belül válaszolnak megkeresésére.</p>
-</div>
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-<!-- Contact Form -->
-<div class="bg-gray-50 rounded-lg p-8 shadow-sm">
-<h3 class="text-xl font-semibold text-gray-900 mb-6">Küldjön üzenetet</h3>
-<form>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-<div>
-<label for="name" class="block text-sm font-medium text-gray-700 mb-2">Név*</label>
-<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm" required>
-</div>
-<div>
-<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email*</label>
-<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm" required>
-</div>
-</div>
-<div class="mb-6">
-<label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefonszám</label>
-<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm">
-</div>
-<div class="mb-6">
-<label for="service" class="block text-sm font-medium text-gray-700 mb-2">Szolgáltatás</label>
-<div class="relative">
-<select id="service" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm appearance-none pr-8">
-<option value="" selected disabled>Válasszon szolgáltatást</option>
-<option value="villanyszereles">Villanyszerelés</option>
-<option value="hibaelharitas">Hibaelhárítás</option>
-<option value="felujitas">Felújítás</option>
-<option value="egyeb">Egyéb</option>
-</select>
-<div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none w-5 h-5 flex items-center justify-center">
-<i class="ri-arrow-down-s-line text-gray-500"></i>
-</div>
-</div>
-</div>
-<div class="mb-6">
-<label for="message" class="block text-sm font-medium text-gray-700 mb-2">Üzenet*</label>
-<textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-sm" required></textarea>
-</div>
-<div class="mb-6 flex items-start">
-<input type="checkbox" id="privacy" class="custom-checkbox mr-3 mt-1" required>
-<label for="privacy" class="text-sm text-gray-600">Elfogadom az <a href="#" class="text-primary hover:underline">adatvédelmi szabályzatot</a> és hozzájárulok adataim kezeléséhez.*</label>
-</div>
-<button type="submit" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 !rounded-button shadow-sm transition whitespace-nowrap">Üzenet küldése</button>
-</form>
-</div>
-<!-- Contact Info & Map -->
-<div>
-<div class="bg-gray-50 rounded-lg p-8 shadow-sm mb-8">
-<h3 class="text-xl font-semibold text-gray-900 mb-6">Elérhetőségeink</h3>
-<div class="space-y-5">
-<div class="flex items-start">
-<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
-<div class="w-5 h-5 flex items-center justify-center text-primary">
-<i class="ri-map-pin-line"></i>
-</div>
-</div>
-<div>
-<h4 class="font-medium text-gray-900 mb-1">Cím</h4>
-<p class="text-gray-600">1117 Budapest, Budafoki út 56.</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
-<div class="w-5 h-5 flex items-center justify-center text-primary">
-<i class="ri-phone-line"></i>
-</div>
-</div>
-<div>
-<h4 class="font-medium text-gray-900 mb-1">Telefon</h4>
-<p class="text-gray-600">+36 30 123 4567</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
-<div class="w-5 h-5 flex items-center justify-center text-primary">
-<i class="ri-mail-line"></i>
-</div>
-</div>
-<div>
-<h4 class="font-medium text-gray-900 mb-1">Email</h4>
-<p class="text-gray-600">info@electricbau.hu</p>
-</div>
-</div>
-<div class="flex items-start">
-<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 shrink-0">
-<div class="w-5 h-5 flex items-center justify-center text-primary">
-<i class="ri-time-line"></i>
-</div>
-</div>
-<div>
-<h4 class="font-medium text-gray-900 mb-1">Nyitvatartás</h4>
-<p class="text-gray-600">Hétfő - Péntek: 8:00 - 17:00</p>
-<p class="text-gray-600">Hétvégén: Zárva (sürgős esetben hívható)</p>
-</div>
-</div>
-</div>
-<div class="mt-8">
-<h4 class="font-medium text-gray-900 mb-3">Kövessen minket</h4>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-facebook-fill"></i>
-</div>
-</a>
-<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-instagram-line"></i>
-</div>
-</a>
-<a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-linkedin-fill"></i>
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="bg-gray-50 rounded-lg overflow-hidden shadow-sm h-[300px] relative">
-<img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Térkép" class="w-full h-full object-cover">
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-gray-900 text-white pt-16 pb-8">
-<div class="container mx-auto px-4">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-<div>
-<a href="#" class="font-['Pacifico'] text-3xl text-white mb-6 block">ElectricBau</a>
-<p class="text-gray-400 mb-6">Professzionális villanyszerelési szolgáltatások magánszemélyek és vállalkozások számára.</p>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-facebook-fill"></i>
-</div>
-</a>
-<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-instagram-line"></i>
-</div>
-</a>
-<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-<div class="w-5 h-5 flex items-center justify-center">
-<i class="ri-linkedin-fill"></i>
-</div>
-</a>
-</div>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-6">Gyors linkek</h4>
-<ul class="space-y-3">
-<li><a href="#fooldal" class="text-gray-400 hover:text-white transition">Főoldal</a></li>
-<li><a href="#szolgaltatasok" class="text-gray-400 hover:text-white transition">Szolgáltatások</a></li>
-<li><a href="#referenciak" class="text-gray-400 hover:text-white transition">Referenciák</a></li>
-<li><a href="#kapcsolat" class="text-gray-400 hover:text-white transition">Kapcsolat</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Árlista</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-6">Szolgáltatások</h4>
-<ul class="space-y-3">
-<li><a href="#" class="text-gray-400 hover:text-white transition">Villanyszerelés</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Hibaelhárítás</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Felújítás</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Elektromos tervezés</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Okosotthon rendszerek</a></li>
-<li><a href="#" class="text-gray-400 hover:text-white transition">Érintésvédelmi felülvizsgálat</a></li>
-</ul>
-</div>
-<div>
-<h4 class="text-lg font-semibold mb-6">Elérhetőség</h4>
-<ul class="space-y-3">
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-<i class="ri-map-pin-line"></i>
-</div>
-<span class="text-gray-400">1117 Budapest, Budafoki út 56.</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-<i class="ri-phone-line"></i>
-</div>
-<span class="text-gray-400">+36 30 123 4567</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-<i class="ri-mail-line"></i>
-</div>
-<span class="text-gray-400">info@electricbau.hu</span>
-</li>
-<li class="flex items-start">
-<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
-<i class="ri-time-line"></i>
-</div>
-<span class="text-gray-400">H-P: 8:00 - 17:00</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8">
-<div class="flex flex-col md:flex-row justify-between items-center">
-<p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 ElectricBau. Minden jog fenntartva.</p>
-<div class="flex space-x-6">
-<a href="#" class="text-gray-500 hover:text-white text-sm transition">Adatvédelmi szabályzat</a>
-<a href="#" class="text-gray-500 hover:text-white text-sm transition">ÁSZF</a>
-<a href="#" class="text-gray-500 hover:text-white text-sm transition">Cookie szabályzat</a>
-</div>
-</div>
-</div>
-</div>
-<button id="back-to-top" class="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all opacity-0 invisible">
-<div class="w-6 h-6 flex items-center justify-center">
-<i class="ri-arrow-up-line"></i>
-</div>
-</button>
-</footer>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-// Mobile menu toggle
-const mobileMenuButton = document.querySelector('button.md\\:hidden');
-const mobileMenu = document.getElementById('mobile-menu');
-const closeMenuButton = document.getElementById('close-menu');
-mobileMenuButton.addEventListener('click', function() {
-mobileMenu.classList.remove('hidden');
-});
-closeMenuButton.addEventListener('click', function() {
-mobileMenu.classList.add('hidden');
-});
-// Mobile menu links
-const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
-mobileLinks.forEach(link => {
-link.addEventListener('click', function() {
-mobileMenu.classList.add('hidden');
-});
-});
-});
-document.addEventListener('DOMContentLoaded', function() {
-// Gallery filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
-const galleryItems = document.querySelectorAll('.gallery-item');
-filterButtons.forEach(button => {
-button.addEventListener('click', () => {
-// Remove active class from all buttons
-filterButtons.forEach(btn => {
-btn.classList.remove('active', 'bg-primary', 'text-white');
-btn.classList.add('text-gray-700');
-});
-// Add active class to clicked button
-button.classList.add('active', 'bg-primary', 'text-white');
-button.classList.remove('text-gray-700');
-const filterValue = button.getAttribute('data-filter');
-galleryItems.forEach(item => {
-if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-item.style.display = 'block';
-} else {
-item.style.display = 'none';
-}
-});
-});
-});
-// Lightbox functionality
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxClose = document.querySelector('.lightbox-close');
-galleryItems.forEach(item => {
-const img = item.querySelector('img');
-img.addEventListener('click', () => {
-lightboxImg.src = img.src;
-lightbox.style.display = 'flex';
-document.body.style.overflow = 'hidden';
-});
-});
-lightboxClose.addEventListener('click', () => {
-lightbox.style.display = 'none';
-document.body.style.overflow = 'auto';
-});
-lightbox.addEventListener('click', (e) => {
-if (e.target === lightbox) {
-lightbox.style.display = 'none';
-document.body.style.overflow = 'auto';
-}
-});
-});
-document.addEventListener('DOMContentLoaded', function() {
-// Back to top button
-const backToTopButton = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-backToTopButton.classList.remove('opacity-0', 'invisible');
-backToTopButton.classList.add('opacity-100', 'visible');
-} else {
-backToTopButton.classList.add('opacity-0', 'invisible');
-backToTopButton.classList.remove('opacity-100', 'visible');
-}
-});
-backToTopButton.addEventListener('click', () => {
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href');
-if (targetId === '#') return;
-const targetElement = document.querySelector(targetId);
-if (targetElement) {
-window.scrollTo({
-top: targetElement.offsetTop - 80,
-behavior: 'smooth'
-});
-}
-});
-});
-});
-</script>
-</body>
+    <section
+      id="home"
+      class="hero-section min-h-screen pt-20 flex items-center"
+    >
+      <div class="slideshow-container">
+        <div
+          class="slide active"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=professional%20electrician%20working%20on%20electrical%20panel%20with%20tools%2C%20modern%20equipment%2C%20blue%20sparks%2C%20industrial%20setting%2C%20high%20quality%20professional%20photography%2C%20realistic%20lighting&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=professional%20soccer%20field%20at%20night%20with%20multiple%20high-powered%20LED%20floodlights%20mounted%20on%20tall%20poles%20surrounding%20the%20field%2C%20intense%20bright%20white%20illumination%20creating%20dramatic%20lighting%20effects%2C%20crisp%20shadows%20on%20perfectly%20maintained%20green%20turf%2C%20modern%20sports%20facility%20with%20state-of-the-art%20lighting%20system%2C%20ultra-realistic%20night%20scene%20with%20multiple%20light%20sources%20casting%20overlapping%20beams%2C%20professional%20sports%20venue%20lighting&width=1920&height=1080&seq=2&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('assets/uszoda.jpg');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=close%20up%20of%20light%20blue%20printed%20circuit%20board%20with%20electronic%20components%2C%20high%20tech%20manufacturing%2C%20blue%20PCB%20with%20silver%20traces%2C%20professional%20electronics%20with%20cool%20tones&width=1920&height=1080&seq=4&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=modern%20building%20management%20system%20control%20room%2C%20multiple%20monitors%20showing%20HVAC%20controls%2C%20security%20cameras%2C%20and%20energy%20management%20interfaces%2C%20professional%20facility%20automation%20system&width=1920&height=1080&seq=5&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=professional%20fire%20alarm%20and%20security%20system%20installation%2C%20control%20panel%20with%20red%20emergency%20lights%2C%20smoke%20detectors%20and%20security%20cameras%20mounted%20on%20ceiling%2C%20modern%20safety%20equipment&width=1920&height=1080&seq=6&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+          "
+        ></div>
+      </div>
+      <div class="container mx-auto px-4 py-20 w-full">
+        <div class="max-w-2xl">
+          <h1
+            class="text-5xl font-bold text-gray-900 mb-6"
+            data-translate="heroTitle"
+          >
+            Üdvözöljük az C. Electricbau Zrt oldalán
+          </h1>
+          <p class="text-xl text-gray-700 mb-8" data-translate="heroDesc">
+            Több mint 30 éves tapasztalattal kínálunk professzionális
+            villanyszerelési szolgáltatásokat lakossági és ipari ügyfeleknek
+            egyaránt.
+          </p>
+          <a
+            href="#contact"
+            class="bg-primary text-white px-8 py-4 rounded-button text-lg font-medium hover:bg-opacity-90 transition duration-300 inline-block whitespace-nowrap"
+            data-translate="requestQuote"
+            >Ajánlatot kérek</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-4" data-translate="servicesTitle">
+            Szolgáltatásaink
+          </h2>
+          <p class="text-lg text-gray-600" data-translate="servicesDesc">
+            Átfogó villanyszerelési szolgáltatásokat nyújtunk, amelyek
+            megfelelnek minden igénynek és elvárásnak.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-flashlight-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv1Title"
+            >
+              Villanyszerelés
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv1Desc">
+              Teljes körű villanyszerelési szolgáltatások új építésű és
+              felújítandó ingatlanok számára.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-plug-2-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv2Title"
+            >
+              Elektromos hálózat kiépítése
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv2Desc">
+              Komplett elektromos rendszerek tervezése és kivitelezése otthonok
+              és vállalkozások számára.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-tools-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv3Title"
+            >
+              Hibaelhárítás
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv3Desc">
+              Gyors és hatékony elektromos hibaelhárítás, 24 órás sürgősségi
+              szolgáltatással.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-settings-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv4Title"
+            >
+              Karbantartás
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv4Desc">
+              Rendszeres karbantartás és ellenőrzés az elektromos rendszerek
+              biztonságos működéséért.
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-home-wifi-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv5Title"
+            >
+              Okos otthon rendszerek
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv5Desc">
+              Modern okos otthon rendszerek telepítése és beállítása az Ön
+              igényei szerint.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-lightbulb-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv6Title"
+            >
+              Világítástechnika
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv6Desc">
+              Egyedi világítási megoldások tervezése és kivitelezése beltéri és
+              kültéri területekre.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-shield-check-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv7Title"
+            >
+              Biztonsági rendszerek
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv7Desc">
+              Riasztó és kamerarendszerek telepítése, karbantartása és javítása.
+            </p>
+          </div>
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-sun-line ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv8Title"
+            >
+              Napelemes rendszerek
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv8Desc">
+              Napelemes rendszerek tervezése, telepítése és karbantartása
+              otthonok és vállalkozások számára.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <h2 class="text-4xl font-bold mb-6" data-translate="about">
+              Rólunk
+            </h2>
+            <p class="text-lg text-gray-600 mb-4" data-translate="aboutDesc1">
+              A C.Electricbau Zrt. 1992 óta működik Magyarországon. Célunk a
+              vevők igényeinek teljesítése költséghatékony és minőségi
+              megoldásokkal.
+            </p>
+            <p class="text-lg text-gray-600 mb-4" data-translate="aboutDesc2">
+              Cégünk fő célja a vevők minőségi igényeinek határidőre való
+              teljesítése, optimális költség ráfordítással.
+            </p>
+            <p class="text-lg text-gray-600 mb-6" data-translate="aboutDesc3">
+              Továbbá arra is törekszünk, hogy a lehető legjobban elégítsük ki
+              felhasználóink elvárásait, valamint forgalmazott termékeink
+              minősége a külső és hazai piacon egyaránt versenyképes legyen.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div class="text-center">
+                <p class="text-4xl font-bold text-primary">30+</p>
+                <p class="text-gray-600" data-translate="stat1">
+                  Év tapasztalat
+                </p>
+              </div>
+              <div class="text-center">
+                <p class="text-4xl font-bold text-primary">500+</p>
+                <p class="text-gray-600" data-translate="stat2">
+                  Sikeres projekt
+                </p>
+              </div>
+              <div class="text-center">
+                <p class="text-4xl font-bold text-primary">300+</p>
+                <p class="text-gray-600" data-translate="stat3">
+                  Elégedett ügyfél
+                </p>
+              </div>
+              <div class="text-center">
+                <p class="text-4xl font-bold text-primary">12</p>
+                <p class="text-gray-600" data-translate="stat4">Szakember</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="https://readdy.ai/api/search-image?query=professional%20electrician%20team%20in%20blue%20uniforms%2C%20group%20photo%2C%20smiling%20professionals%20with%20tools%2C%20modern%20office%20background%2C%20high%20quality%20professional%20photography&width=800&height=600&seq=2&orientation=landscape"
+              alt="Electric-Bau Kft. csapata"
+              class="rounded-lg shadow-xl w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-4xl font-bold mb-4" data-translate="references">
+            Referenciák
+          </h2>
+          <p class="text-lg text-gray-600" data-translate="refDesc">
+            Ismerje meg néhány korábbi projektünket, amelyekre különösen büszkék
+            vagyunk.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button
+            class="filter-button active px-6 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300 whitespace-nowrap !rounded-button"
+            data-filter="all"
+            data-translate="filterAll"
+          >
+            Összes
+          </button>
+          <button
+            class="filter-button px-6 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300 whitespace-nowrap !rounded-button"
+            data-filter="residential"
+            data-translate="filterRes"
+          >
+            Lakossági
+          </button>
+          <button
+            class="filter-button px-6 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300 whitespace-nowrap !rounded-button"
+            data-filter="commercial"
+            data-translate="filterCom"
+          >
+            Kereskedelmi
+          </button>
+          <button
+            class="filter-button px-6 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300 whitespace-nowrap !rounded-button"
+            data-filter="industrial"
+            data-translate="filterInd"
+          >
+            Ipari
+          </button>
+        </div>
+        <div class="masonry-grid">
+          <div class="masonry-item" data-category="residential">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20apartment%20electrical%20installation%2C%20clean%20wiring%2C%20electrical%20panel%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=3&orientation=landscape"
+                alt="Lakás villanyszerelés"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterRes"
+                  >Lakossági</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref1Title">
+                  Budai családi ház teljes elektromos felújítása
+                </h3>
+                <p class="text-gray-600" data-translate="ref1Desc">
+                  Komplett elektromos hálózat korszerűsítése, okosotthon
+                  rendszer kiépítése és energiahatékony világítás telepítése.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item" data-category="commercial">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=retail%20store%20lighting%20installation%2C%20modern%20shop%20lighting%2C%20commercial%20electrical%20work%2C%20high%20quality%20professional%20photography&width=600&height=800&seq=4&orientation=portrait"
+                alt="Üzlethelyiség világítás"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterCom"
+                  >Kereskedelmi</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref2Title">
+                  Belvárosi butik világítástechnika
+                </h3>
+                <p class="text-gray-600" data-translate="ref2Desc">
+                  Egyedi világítási rendszer tervezése és kivitelezése egy
+                  exkluzív ruhabolt számára, energiatakarékos LED
+                  technológiával.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item" data-category="industrial">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=industrial%20electrical%20installation%2C%20factory%20electrical%20panel%2C%20industrial%20wiring%2C%20high%20quality%20professional%20photography&width=600&height=500&seq=5&orientation=landscape"
+                alt="Ipari elektromos rendszer"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterInd"
+                  >Ipari</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref3Title">
+                  Gyártóüzem elektromos rendszer kiépítése
+                </h3>
+                <p class="text-gray-600" data-translate="ref3Desc">
+                  Komplett ipari elektromos rendszer tervezése és kivitelezése,
+                  beleértve az erősáramú hálózatot és a vezérlőrendszereket.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item" data-category="residential">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=smart%20home%20installation%2C%20home%20automation%20system%2C%20modern%20house%20electrical%20control%20panel%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=6&orientation=landscape"
+                alt="Okos otthon rendszer"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterRes"
+                  >Lakossági</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref4Title">
+                  Okos otthon rendszer telepítése
+                </h3>
+                <p class="text-gray-600" data-translate="ref4Desc">
+                  Teljes körű okos otthon rendszer kiépítése, amely magában
+                  foglalja a világítás, fűtés, biztonsági rendszerek és
+                  szórakoztató elektronika vezérlését.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item" data-category="commercial">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=office%20building%20electrical%20installation%2C%20commercial%20lighting%2C%20modern%20office%20electrical%20systems%2C%20high%20quality%20professional%20photography&width=600&height=500&seq=7&orientation=landscape"
+                alt="Irodaház elektromos rendszer"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterCom"
+                  >Kereskedelmi</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref5Title">
+                  Irodaház elektromos felújítása
+                </h3>
+                <p class="text-gray-600" data-translate="ref5Desc">
+                  Egy 5 emeletes irodaház teljes elektromos rendszerének
+                  korszerűsítése, energiahatékony megoldásokkal és modern
+                  biztonsági rendszerekkel.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="masonry-item" data-category="industrial">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=solar%20panel%20installation%20on%20industrial%20roof%2C%20commercial%20solar%20system%2C%20renewable%20energy%20installation%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=8&orientation=landscape"
+                alt="Napelemes rendszer"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterInd"
+                  >Ipari</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref6Title">
+                  Ipari napelemes rendszer telepítése
+                </h3>
+                <p class="text-gray-600" data-translate="ref6Desc">
+                  100 kW-os napelemes rendszer tervezése és telepítése egy
+                  logisztikai központ tetejére, jelentős energiamegtakarítást
+                  eredményezve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-4xl font-bold mb-4" data-translate="contact">
+            Kapcsolat
+          </h2>
+          <p class="text-lg text-gray-600" data-translate="contactDesc">
+            Vegye fel velünk a kapcsolatot, és kérjen ingyenes árajánlatot!
+          </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2">
+            <form class="bg-white p-8 rounded-lg shadow-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-translate="formName"
+                    >Név*</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-translate="formEmail"
+                    >E-mail*</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-translate="formPhone"
+                    >Telefonszám*</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="service"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-translate="formService"
+                    >Szolgáltatás</label
+                  >
+                  <div class="relative">
+                    <select
+                      id="service"
+                      class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8"
+                    >
+                      <option value="" data-translate="formServiceOpt">
+                        Válasszon szolgáltatást
+                      </option>
+                      <option
+                        value="villanyszereles"
+                        data-translate="srv1Title"
+                      >
+                        Villanyszerelés
+                      </option>
+                      <option value="halozat" data-translate="srv2Title">
+                        Elektromos hálózat kiépítése
+                      </option>
+                      <option value="hibaelharitas" data-translate="srv3Title">
+                        Hibaelhárítás
+                      </option>
+                      <option value="karbantartas" data-translate="srv4Title">
+                        Karbantartás
+                      </option>
+                      <option value="okosotthon" data-translate="srv5Title">
+                        Okos otthon rendszerek
+                      </option>
+                      <option value="vilagitas" data-translate="srv6Title">
+                        Világítástechnika
+                      </option>
+                      <option value="biztonsag" data-translate="srv7Title">
+                        Biztonsági rendszerek
+                      </option>
+                      <option value="napelem" data-translate="srv8Title">
+                        Napelemes rendszerek
+                      </option>
+                    </select>
+                    <div
+                      class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                    >
+                      <i class="ri-arrow-down-s-line text-gray-400"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  data-translate="formMsg"
+                  >Üzenet*</label
+                >
+                <textarea
+                  id="message"
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-6">
+                <label class="custom-checkbox">
+                  <input type="checkbox" required />
+                  <span class="checkmark"></span>
+                  <span class="text-gray-600"
+                    ><span data-translate="formTerms">Elfogadom az</span>
+                    <a
+                      href="#"
+                      class="text-primary hover:underline"
+                      data-translate="formPrivacy"
+                      >adatvédelmi nyilatkozatot</a
+                    >*</span
+                  >
+                </label>
+              </div>
+              <button
+                type="submit"
+                data-translate="formSubmit"
+                class="bg-primary text-white px-8 py-4 rounded-button text-lg font-medium hover:bg-opacity-90 transition duration-300 w-full md:w-auto whitespace-nowrap !rounded-button"
+              >
+                Üzenet küldése
+              </button>
+            </form>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+              <h3 class="text-2xl font-bold mb-6" data-translate="contactInfo">
+                Elérhetőségeink
+              </h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="ri-map-pin-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-medium text-gray-900"
+                      data-translate="addressLbl"
+                    >
+                      Cím
+                    </h4>
+                    <p class="text-gray-600">
+                      H-2040 Budaörs, Gyár u. 2. (BITEP)
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="ri-phone-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-medium text-gray-900"
+                      data-translate="phoneLbl"
+                    >
+                      Telefon
+                    </h4>
+                    <p class="text-gray-600">+36-23-418-932</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="ri-mail-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-medium text-gray-900"
+                      data-translate="emailLbl"
+                    >
+                      E-mail
+                    </h4>
+                    <p class="text-gray-600">info@electric-bau.hu</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
+                  >
+                    <i class="ri-time-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-medium text-gray-900"
+                      data-translate="hoursLbl"
+                    >
+                      Nyitvatartás
+                    </h4>
+                    <p class="text-gray-600" data-translate="hours1">
+                      Hétfő - Péntek: 8:00 - 17:00
+                    </p>
+                    <p class="text-gray-600" data-translate="hours2">
+                      Szombat: 9:00 - 13:00
+                    </p>
+                    <p class="text-gray-600" data-translate="hours3">
+                      Vasárnap: Zárva
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8">
+                <h4
+                  class="font-medium text-gray-900 mb-4"
+                  data-translate="followUs"
+                >
+                  Kövessen minket
+                </h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="ri-facebook-fill"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full hover:bg-primary hover:text-white transition duration-300"
+                  >
+                    <i class="ri-linkedin-fill"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="h-80 rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1928.032633253923!2d18.895764081640884!3d47.47259323217593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dffabf4ca793%3A0xb6e07b92aef9718d!2zQnVkYcO2cnMsIEd5w6FyIHUuIDIsIDIwNDA!5e0!3m2!1shu!2shu!4v1745755549130!5m2!1shu!2shu"
+                width="800"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div>
+            <div class="flex items-center mb-6">
+              <p>
+                <img
+                  src="assets/nagylogo.png"
+                  width="150"
+                  height="100"
+                  alt="Logo"
+                />
+              </p>
+              <span
+                class="text-sm text-gray-400 ml-[18px]"
+                data-translate="footerSince"
+                >alapítva 1992</span
+              >
+            </div>
+            <p class="text-gray-400 mb-6" data-translate="footerDesc">
+              Professzionális villanyszerelési szolgáltatások több mint 30 éves
+              tapasztalattal. Minőségi munka, megbízhatóság, elégedett ügyfelek.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition duration-300"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition duration-300"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition duration-300"
+              >
+                <i class="ri-linkedin-fill"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6" data-translate="quickLinks">
+              Gyors linkek
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#home"
+                  data-translate="home"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Főoldal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  data-translate="services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Szolgáltatások</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#references"
+                  data-translate="references"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Referenciák</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  data-translate="about"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Rólunk</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  data-translate="contact"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Kapcsolat</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-6" data-translate="footerContact">
+              Elérhetőségek
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mr-3 flex-shrink-0 mt-1"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <span class="text-gray-400">H-2040 Budaörs, Gyár u. 2.</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mr-3 flex-shrink-0 mt-1"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <span class="text-gray-400">+36-23-418-932</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mr-3 flex-shrink-0 mt-1"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <span class="text-gray-400">info@electric-bau.hu</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center mr-3 flex-shrink-0 mt-1"
+                >
+                  <i class="ri-time-line text-primary"></i>
+                </div>
+                <span class="text-gray-400" data-translate="hours1"
+                  >H-P: 8:00 - 17:00</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0" data-translate="rights">
+            © 2025 C.ELECTRICBAU Zrt. Minden jog fenntartva.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              data-translate="privacy"
+              >Adatvédelmi nyilatkozat</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              data-translate="terms"
+              >ÁSZF</a
+            >
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              data-translate="cookies"
+              >Cookie kezelés</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
