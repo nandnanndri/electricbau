@@ -585,19 +585,21 @@
         </div>
         <div class="flex flex-col lg:flex-row gap-12">
           <div class="lg:w-1/2">
-            <form class="bg-white p-8 rounded-lg shadow-lg">
+            <form
+              action="https://formspree.io/f/IDE_JON_A_FORM_ID"
+              method="POST"
+              class="bg-white p-8 rounded-lg shadow-lg"
+            >
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label
-                    for="name"
-                    class="block text-gray-700 font-medium mb-2"
-                    data-translate="formName"
-                    >Név*</label
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Név</label
                   >
                   <input
                     type="text"
                     id="name"
-                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    name="name"
+                    class="w-full px-4 py-3 border border-gray-300 rounded"
                     required
                   />
                 </div>
@@ -605,29 +607,30 @@
                   <label
                     for="email"
                     class="block text-gray-700 font-medium mb-2"
-                    data-translate="formEmail"
-                    >E-mail*</label
+                    >E-mail</label
                   >
                   <input
                     type="email"
                     id="email"
-                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    name="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded"
                     required
                   />
                 </div>
               </div>
+
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label
                     for="phone"
                     class="block text-gray-700 font-medium mb-2"
-                    data-translate="formPhone"
-                    >Telefonszám*</label
+                    >Telefonszám</label
                   >
                   <input
                     type="tel"
                     id="phone"
-                    class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                    name="phone"
+                    class="w-full px-4 py-3 border border-gray-300 rounded"
                     required
                   />
                 </div>
@@ -635,92 +638,59 @@
                   <label
                     for="service"
                     class="block text-gray-700 font-medium mb-2"
-                    data-translate="formService"
                     >Szolgáltatás</label
                   >
-                  <div class="relative">
-                    <select
-                      id="service"
-                      class="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pr-8"
-                    >
-                      <option value="" data-translate="formServiceOpt">
-                        Válasszon szolgáltatást
-                      </option>
-                      <option
-                        value="epuletautomatika"
-                        data-translate="srv1Title"
-                      >
-                        Épületautomatika, épületfelügyeleti rendszerek
-                      </option>
-                      <option
-                        value="villanyszereles"
-                        data-translate="srv2Title"
-                      >
-                        Villanyszerelés, elektromos hálózat kiépítése
-                      </option>
-                      <option
-                        value="karbantartas-hibaelharitas"
-                        data-translate="srv3Title"
-                      >
-                        Karbantartás, hibaelhárítás
-                      </option>
-                      <option
-                        value="szoftverfejlesztes"
-                        data-translate="srv4Title"
-                      >
-                        Épületfelügyeleti megjelenítő szoftver fejlesztése
-                      </option>
-                      <option
-                        value="vilagitastechnika"
-                        data-translate="srv5Title"
-                      >
-                        Világítástechnika
-                      </option>
-                      <option value="pcb-beultetes" data-translate="srv6Title">
-                        Nyomtatott áramkörök beültetése bérmunkában
-                      </option>
-                    </select>
-                    <div
-                      class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
-                    >
-                      <i class="ri-arrow-down-s-line text-gray-400"></i>
-                    </div>
-                  </div>
+                  <select
+                    id="service"
+                    name="service"
+                    class="w-full px-4 py-3 border border-gray-300 rounded"
+                    required
+                  >
+                    <option value="">Válasszon szolgáltatást</option>
+                    <option value="epuletautomatika">
+                      Épületautomatika, épületfelügyeleti rendszerek
+                    </option>
+                    <option value="villanyszereles">
+                      Villanyszerelés, elektromos hálózat kiépítése
+                    </option>
+                    <option value="karbantartas-hibaelharitas">
+                      Karbantartás, hibaelhárítás
+                    </option>
+                    <option value="szoftverfejlesztes">
+                      Épületfelügyeleti megjelenítő szoftver fejlesztése
+                    </option>
+                    <option value="vilagitastechnika">Világítástechnika</option>
+                    <option value="pcb-beultetes">
+                      Nyomtatott áramkörök beültetése bérmunkában
+                    </option>
+                  </select>
                 </div>
               </div>
+
               <div class="mb-6">
                 <label
                   for="message"
                   class="block text-gray-700 font-medium mb-2"
-                  data-translate="formMsg"
-                  >Üzenet*</label
+                  >Üzenet</label
                 >
                 <textarea
                   id="message"
+                  name="message"
                   rows="5"
-                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  class="w-full px-4 py-3 border border-gray-300 rounded"
                   required
                 ></textarea>
               </div>
-              <div class="mb-6">
-                <label class="custom-checkbox">
-                  <input type="checkbox" required />
-                  <span class="checkmark"></span>
-                  <span class="text-gray-600"
-                    ><span data-translate="formTerms">Elfogadom az</span>
-                    <a
-                      href="#"
-                      class="text-primary hover:underline"
-                      data-translate="formPrivacy"
-                      >adatvédelmi nyilatkozatot</a
-                    >*</span
-                  >
-                </label>
-              </div>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="Új ajánlatkérés az electricbau weboldalról"
+              />
+
               <button
                 type="submit"
-                data-translate="formSubmit"
-                class="bg-primary text-white px-8 py-4 rounded-button text-lg font-medium hover:bg-opacity-90 transition duration-300 w-full md:w-auto whitespace-nowrap !rounded-button"
+                class="bg-primary text-white px-8 py-4 rounded-button text-lg font-medium w-full md:w-auto"
               >
                 Üzenet küldése
               </button>
