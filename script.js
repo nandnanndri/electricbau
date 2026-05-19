@@ -14,31 +14,34 @@ const translations = {
     servicesDesc:
       "Átfogó villanyszerelési szolgáltatásokat nyújtunk, amelyek megfelelnek minden igénynek és elvárásnak.",
 
-    // Services details
-    srv1Title: "Villanyszerelés",
+    // HU
+    servicesTitle: "Szolgáltatásaink",
+    servicesDesc:
+      "Az ügyféllel egyeztetett, fókuszált szolgáltatási portfólió 6 kiemelt területen.",
+
+    srv1Title: "Épületautomatika, épületfelügyeleti rendszerek",
     srv1Desc:
-      "Teljes körű villanyszerelési szolgáltatások új építésű és felújítandó ingatlanok számára.",
-    srv2Title: "Elektromos hálózat kiépítése",
+      "Épületautomatika és épületfelügyeleti rendszerek tervezése, kivitelezése és üzembe helyezése komplett megoldásokkal.",
+
+    srv2Title: "Villanyszerelés, elektromos hálózat kiépítése",
     srv2Desc:
-      "Komplett elektromos rendszerek tervezése és kivitelezése otthonok és vállalkozások számára.",
-    srv3Title: "Hibaelhárítás",
+      "Komplett villanyszerelési és elektromos hálózatépítési munkák új és meglévő létesítmények számára.",
+
+    srv3Title: "Karbantartás, hibaelhárítás",
     srv3Desc:
-      "Gyors és hatékony elektromos hibaelhárítás, 24 órás sürgősségi szolgáltatással.",
-    srv4Title: "Karbantartás",
+      "Rendszeres karbantartás és gyors, szakszerű hibaelhárítás az elektromos rendszerek üzembiztos működéséért.",
+
+    srv4Title: "Épületfelügyeleti megjelenítő szoftver fejlesztése",
     srv4Desc:
-      "Rendszeres karbantartás és ellenőrzés az elektromos rendszerek biztonságos működéséért.",
-    srv5Title: "Okos otthon rendszerek",
+      "Szabadon felhasználható épületfelügyeleti megjelenítő szoftver fejlesztése komplett, egyedi igényekre szabott kivitelben.",
+
+    srv5Title: "Világítástechnika",
     srv5Desc:
-      "Modern okos otthon rendszerek telepítése és beállítása az Ön igényei szerint.",
-    srv6Title: "Világítástechnika",
+      "Világítástechnikai megoldások beltéri és kültéri területekre, sportpályákra, csarnokokba és egyedi létesítményekhez.",
+
+    srv6Title: "Nyomtatott áramkörök beültetése bérmunkában",
     srv6Desc:
-      "Egyedi világítási megoldások tervezése és kivitelezése beltéri és kültéri területekre.",
-    srv7Title: "Biztonsági rendszerek",
-    srv7Desc:
-      "Riasztó és kamerarendszerek telepítése, karbantartása és javítása.",
-    srv8Title: "Napelemes rendszerek",
-    srv8Desc:
-      "Napelemes rendszerek tervezése, telepítése és karbantartása otthonok és vállalkozások számára.",
+      "Precíziós nyomtatott áramkör-beültetés bérmunkában, megbízható kivitelezéssel és stabil gyártási háttérrel.",
 
     // About Section
     aboutDesc1:
@@ -127,30 +130,34 @@ const translations = {
       "We provide comprehensive electrical services that meet all needs and expectations.",
 
     // Services details
-    srv1Title: "Electrical Installation",
+    // EN
+    servicesTitle: "Our Services",
+    servicesDesc:
+      "A focused service portfolio agreed with the client across 6 highlighted areas.",
+
+    srv1Title: "Building automation and supervision systems",
     srv1Desc:
-      "Comprehensive electrical installation services for newly built and renovated properties.",
-    srv2Title: "Electrical Network Setup",
+      "Design, implementation and commissioning of building automation and supervision systems with complete solutions.",
+
+    srv2Title: "Electrical installation and network construction",
     srv2Desc:
-      "Design and implementation of complete electrical systems for homes and businesses.",
-    srv3Title: "Troubleshooting",
+      "Complete electrical installation and network construction works for new and existing facilities.",
+
+    srv3Title: "Maintenance and troubleshooting",
     srv3Desc:
-      "Fast and efficient electrical troubleshooting with 24-hour emergency service.",
-    srv4Title: "Maintenance",
+      "Regular maintenance and fast, professional troubleshooting for reliable electrical operation.",
+
+    srv4Title: "Building supervision display software development",
     srv4Desc:
-      "Regular maintenance and inspection to ensure the safe operation of electrical systems.",
-    srv5Title: "Smart Home Systems",
+      "Development of freely usable building supervision display software with complete, custom-tailored implementation.",
+
+    srv5Title: "Lighting technology",
     srv5Desc:
-      "Installation and configuration of modern smart home systems according to your needs.",
-    srv6Title: "Lighting Technology",
+      "Lighting solutions for indoor and outdoor areas, sports fields, halls and custom facilities.",
+
+    srv6Title: "Printed circuit board assembly as subcontract work",
     srv6Desc:
-      "Design and implementation of custom lighting solutions for indoor and outdoor areas.",
-    srv7Title: "Security Systems",
-    srv7Desc:
-      "Installation, maintenance, and repair of alarm and security camera systems.",
-    srv8Title: "Solar Panel Systems",
-    srv8Desc:
-      "Design, installation, and maintenance of solar panel systems for homes and businesses.",
+      "Precision PCB assembly as subcontract work with reliable execution and stable production support.",
 
     // About Section
     aboutDesc1:
