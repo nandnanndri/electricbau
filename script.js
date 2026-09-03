@@ -6,22 +6,22 @@ const translations = {
     references: "Referenciák",
     about: "Rólunk",
     contact: "Kapcsolat",
-    heroTitle: "Üdvözöljük az C. Electricbau Zrt oldalán",
+    heroTitle: "Üdvözöljük a C. Electricbau Zrt oldalán",
     heroDesc:
       "Több mint 30 éves tapasztalattal kínálunk professzionális villanyszerelési szolgáltatásokat lakossági és ipari ügyfeleknek egyaránt.",
     requestQuote: "Ajánlatot kérek",
-    servicesTitle: "Szolgáltatásaink",
-    servicesDesc:
-      "Átfogó villanyszerelési szolgáltatásokat nyújtunk, amelyek megfelelnek minden igénynek és elvárásnak.",
 
-    // HU
     servicesTitle: "Szolgáltatásaink",
     servicesDesc:
-      "Az ügyféllel egyeztetett, fókuszált szolgáltatási portfólió 6 kiemelt területen.",
+      "Az ügyféllel egyeztetett, fókuszált szolgáltatási portfólió 7 kiemelt területen.",
 
     srv1Title: "Épületautomatika, épületfelügyeleti rendszerek",
     srv1Desc:
       "Épületautomatika és épületfelügyeleti rendszerek tervezése, kivitelezése és üzembe helyezése komplett megoldásokkal.",
+
+    srv7Title: "Tűzjelzőrendszerek",
+    srv7Desc:
+      "Tűzjelzőrendszerek tervezése, engedélyeztetése, kivitelezése, üzembe helyezése.",
 
     srv2Title: "Villanyszerelés, elektromos hálózat kiépítése",
     srv2Desc:
@@ -43,7 +43,6 @@ const translations = {
     srv6Desc:
       "Precíziós nyomtatott áramkör-beültetés bérmunkában, megbízható kivitelezéssel és stabil gyártási háttérrel.",
 
-    // About Section
     aboutDesc1:
       "A C.Electricbau Zrt. 1992 óta működik Magyarországon. Célunk a vevők igényeinek teljesítése költséghatékony és minőségi megoldásokkal.",
     aboutDesc2:
@@ -55,33 +54,27 @@ const translations = {
     stat3: "Elégedett ügyfél",
     stat4: "Szakember",
 
-    // References Section
     refDesc:
       "Ismerje meg néhány korábbi projektünket, amelyekre különösen büszkék vagyunk.",
     filterAll: "Összes",
     filterRes: "Lakossági",
     filterCom: "Kereskedelmi",
     filterInd: "Ipari",
-    ref1Title: "Budai családi ház teljes elektromos felújítása",
+    ref1Title: "Épületfelügyeleti rendszerek",
     ref1Desc:
-      "Komplett elektromos hálózat korszerűsítése, okosotthon rendszer kiépítése és energiahatékony világítás telepítése.",
-    ref2Title: "Belvárosi butik világítástechnika",
+      "Magyar Telekom Nyrt. részére 47 gépterem, ONE részére 8 gépterem.",
+    ref2Title: "Sportpálya, csarnok világítás",
     ref2Desc:
-      "Egyedi világítási rendszer tervezése és kivitelezése egy exkluzív ruhabolt számára, energiatakarékos LED technológiával.",
-    ref3Title: "Gyártóüzem elektromos rendszer kiépítése",
+      "BVSC/BEAC asztalitenisz csarnok, teniszpálya, nagyméretű focipálya illetve uszoda világítási rendszerének kiépítése.",
+    ref3Title: "0,4 kV elektromos rendszer kiépítése",
     ref3Desc:
       "Komplett ipari elektromos rendszer tervezése és kivitelezése, beleértve az erősáramú hálózatot és a vezérlőrendszereket.",
     ref4Title: "Okos otthon rendszer telepítése",
     ref4Desc:
-      "Teljes körű okos otthon rendszer kiépítése, amely magában foglalja a világítás, fűtés, biztonsági rendszerek és szórakoztató elektronika vezérlését.",
-    ref5Title: "Irodaház elektromos felújítása",
-    ref5Desc:
-      "Egy 5 emeletes irodaház teljes elektromos rendszerének korszerűsítése, energiahatékony megoldásokkal és modern biztonsági rendszerekkel.",
-    ref6Title: "Ipari napelemes rendszer telepítése",
-    ref6Desc:
-      "100 kW-os napelemes rendszer tervezése és telepítése egy logisztikai központ tetejére, jelentős energiamegtakarítást eredményezve.",
+      "Teljes körű okos otthon rendszer kiépítése, amely magában foglalja a világítás, fűtés, biztonsági rendszerek és szórakoztató elektronika vezérlését 8 db családiházban.",
+    ref5Title: "Megjelenítő szoftver fejlesztése",
+    ref5Desc: "Épületautomatika, okos otthon részére.",
 
-    // Contact Section
     contactDesc:
       "Vegye fel velünk a kapcsolatot, és kérjen ingyenes árajánlatot!",
     formName: "Név*",
@@ -99,11 +92,10 @@ const translations = {
     emailLbl: "E-mail",
     hoursLbl: "Nyitvatartás",
     hours1: "Hétfő - Péntek: 8:00 - 17:00",
-    hours2: "Szombat: 9:00 - 13:00",
+    hours2: "Szombat: Zárva",
     hours3: "Vasárnap: Zárva",
     followUs: "Kövessen minket",
 
-    // Footer Section
     footerSince: "alapítva 1992",
     footerDesc:
       "Professzionális villanyszerelési szolgáltatások több mint 30 éves tapasztalattal. Minőségi munka, megbízhatóság, elégedett ügyfelek.",
@@ -125,19 +117,18 @@ const translations = {
     heroDesc:
       "With over 30 years of experience, we provide professional electrical services for both residential and industrial clients.",
     requestQuote: "Request Quote",
-    servicesTitle: "Our Services",
-    servicesDesc:
-      "We provide comprehensive electrical services that meet all needs and expectations.",
 
-    // Services details
-    // EN
     servicesTitle: "Our Services",
     servicesDesc:
-      "A focused service portfolio agreed with the client across 6 highlighted areas.",
+      "A focused service portfolio agreed with the client across 7 highlighted areas.",
 
     srv1Title: "Building automation and supervision systems",
     srv1Desc:
       "Design, implementation and commissioning of building automation and supervision systems with complete solutions.",
+
+    srv7Title: "Fire alarm systems",
+    srv7Desc:
+      "Design, permitting, implementation and commissioning of fire alarm systems.",
 
     srv2Title: "Electrical installation and network construction",
     srv2Desc:
@@ -159,7 +150,6 @@ const translations = {
     srv6Desc:
       "Precision PCB assembly as subcontract work with reliable execution and stable production support.",
 
-    // About Section
     aboutDesc1:
       "C.Electricbau Zrt. has been operating in Hungary since 1992. Our goal is to fulfill customer needs with cost-effective and high-quality solutions.",
     aboutDesc2:
@@ -171,33 +161,27 @@ const translations = {
     stat3: "Satisfied Customers",
     stat4: "Professionals",
 
-    // References Section
     refDesc:
       "Discover some of our previous projects that we are particularly proud of.",
     filterAll: "All",
     filterRes: "Residential",
     filterCom: "Commercial",
     filterInd: "Industrial",
-    ref1Title: "Complete electrical renovation of a family house in Buda",
+    ref1Title: "Building supervision systems",
     ref1Desc:
-      "Modernization of the complete electrical network, smart home system setup, and energy-efficient lighting installation.",
-    ref2Title: "Downtown boutique lighting",
+      "47 server rooms for Magyar Telekom Nyrt., 8 server rooms for ONE.",
+    ref2Title: "Sports field and hall lighting",
     ref2Desc:
-      "Design and implementation of a custom lighting system for an exclusive clothing store, using energy-saving LED technology.",
-    ref3Title: "Electrical system setup for a manufacturing plant",
+      "Installation of the lighting system for the BVSC/BEAC table tennis hall, tennis court, large football field and swimming pool.",
+    ref3Title: "0.4 kV electrical system installation",
     ref3Desc:
       "Design and implementation of a complete industrial electrical system, including power network and control systems.",
     ref4Title: "Smart home system installation",
     ref4Desc:
-      "Comprehensive smart home system setup, including control of lighting, heating, security systems, and entertainment electronics.",
-    ref5Title: "Office building electrical renovation",
-    ref5Desc:
-      "Modernization of the complete electrical system of a 5-story office building, with energy-efficient solutions and modern security systems.",
-    ref6Title: "Industrial solar panel system installation",
-    ref6Desc:
-      "Design and installation of a 100 kW solar panel system on the roof of a logistics center, resulting in significant energy savings.",
+      "Comprehensive smart home system setup, including control of lighting, heating, security systems, and entertainment electronics in 8 family houses.",
+    ref5Title: "Display software development",
+    ref5Desc: "Building automation, for smart homes.",
 
-    // Contact Section
     contactDesc: "Contact us and ask for a free quote!",
     formName: "Name*",
     formEmail: "Email*",
@@ -214,11 +198,10 @@ const translations = {
     emailLbl: "Email",
     hoursLbl: "Opening Hours",
     hours1: "Monday - Friday: 8:00 - 17:00",
-    hours2: "Saturday: 9:00 - 13:00",
+    hours2: "Saturday: Closed",
     hours3: "Sunday: Closed",
     followUs: "Follow us",
 
-    // Footer Section
     footerSince: "founded in 1992",
     footerDesc:
       "Professional electrical services with over 30 years of experience. Quality work, reliability, satisfied clients.",
@@ -239,7 +222,6 @@ function switchLanguage(lang) {
     }
   });
 
-  // Update active language visual state
   document.querySelectorAll(".language-switch").forEach((link) => {
     if (link.getAttribute("data-lang") === lang) {
       link.classList.add("text-primary");
@@ -262,6 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
       slides[currentSlide].classList.add("active");
     }, 5000); // Change slide every 5 seconds
   }
+
   startSlideshow();
 
   // 2. Language switcher

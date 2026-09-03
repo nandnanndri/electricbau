@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C.Electricbau Zrt. - Villanyszerelési megoldások profiktól</title>
     <link rel="icon" href="assets/logopici.ico" type="image/x-icon" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
+
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script>
       tailwind.config = {
@@ -42,7 +45,6 @@
     </script>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body class="font-sans text-gray-800">
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div
@@ -50,17 +52,16 @@
       >
         <div class="flex items-center">
           <div>
-            <p>
-              <img
-                src="assets/nagylogo.png"
-                width="200"
-                height="150"
-                alt="Logo"
-              />
-            </p>
+            <img
+              src="assets/nagylogo.png"
+              width="200"
+              height="150"
+              alt="Logo"
+            />
             <p data-translate="since" class="text-center">Alapítva 1992</p>
           </div>
         </div>
+
         <nav class="hidden lg:flex items-center space-x-8">
           <a
             href="#home"
@@ -74,12 +75,12 @@
             class="text-gray-800 hover:text-primary font-medium"
             >Szolgáltatások</a
           >
-          <a
+          <!-- <a
             href="#about"
             data-translate="about"
             class="text-gray-800 hover:text-primary font-medium"
             >Rólunk</a
-          >
+          > -->
           <a
             href="#references"
             data-translate="references"
@@ -92,6 +93,7 @@
             class="text-gray-800 hover:text-primary font-medium"
             >Kapcsolat</a
           >
+
           <div
             class="flex items-center space-x-2 ml-4 border-l pl-4 border-gray-200"
           >
@@ -110,6 +112,7 @@
             >
           </div>
         </nav>
+
         <button
           class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700"
           id="mobile-menu-button"
@@ -117,6 +120,7 @@
           <i class="ri-menu-line ri-2x"></i>
         </button>
       </div>
+
       <nav id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
         <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
           <a
@@ -149,6 +153,7 @@
             class="text-gray-800 hover:text-primary font-medium py-2"
             >Kapcsolat</a
           >
+
           <div
             class="flex items-center space-x-2 py-2 border-t border-gray-200"
           >
@@ -224,13 +229,14 @@
           "
         ></div>
       </div>
+
       <div class="container mx-auto px-4 py-20 w-full">
         <div class="max-w-2xl">
           <h1
             class="text-5xl font-bold text-gray-900 mb-6"
             data-translate="heroTitle"
           >
-            Üdvözöljük az C. Electricbau Zrt oldalán
+            Üdvözöljük a C. Electricbau Zrt oldalán
           </h1>
           <p class="text-xl text-gray-700 mb-8" data-translate="heroDesc">
             Több mint 30 éves tapasztalattal kínálunk professzionális
@@ -254,16 +260,14 @@
             Szolgáltatásaink
           </h2>
           <p class="text-lg text-gray-600" data-translate="servicesDesc">
-            Az ügyféllel egyeztetett, fókuszált szolgáltatási portfólió 6
+            Az ügyféllel egyeztetett, fókuszált szolgáltatási portfólió 7
             kiemelt területen.
           </p>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 services-grid-six"
-        >
+        <div class="flex flex-wrap justify-center gap-8 services-grid-six">
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -283,7 +287,27 @@
           </div>
 
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
+          >
+            <div
+              class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-fire-fill ri-2x text-primary"></i>
+            </div>
+            <h3
+              class="text-xl font-bold mb-4 text-center"
+              data-translate="srv7Title"
+            >
+              Tűzjelzőrendszerek
+            </h3>
+            <p class="text-gray-600 text-center" data-translate="srv7Desc">
+              Tűzjelzőrendszerek tervezése, engedélyeztetése, kivitelezése,
+              üzembe helyezése.
+            </p>
+          </div>
+
+          <div
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -303,7 +327,7 @@
           </div>
 
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -323,7 +347,7 @@
           </div>
 
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -343,7 +367,7 @@
           </div>
 
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -363,7 +387,7 @@
           </div>
 
           <div
-            class="service-card bg-white p-8 rounded shadow-lg transition duration-300"
+            class="service-card bg-white p-8 rounded shadow-lg transition duration-300 w-full md:w-[calc(50%-1rem)] xl:w-[calc(33.333%-1.5rem)]"
           >
             <div
               class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mb-6 mx-auto"
@@ -396,6 +420,7 @@
             vagyunk.
           </p>
         </div>
+
         <div class="flex flex-wrap justify-center gap-4 mb-12">
           <button
             class="filter-button active px-6 py-2 rounded-full border border-gray-300 hover:bg-primary hover:text-white hover:border-primary transition duration-300 whitespace-nowrap !rounded-button"
@@ -426,59 +451,13 @@
             Ipari
           </button>
         </div>
+
         <div class="masonry-grid">
-          <div class="masonry-item" data-category="residential">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://readdy.ai/api/search-image?query=modern%20apartment%20electrical%20installation%2C%20clean%20wiring%2C%20electrical%20panel%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=3&orientation=landscape"
-                alt="Lakás villanyszerelés"
-                class="w-full h-auto object-cover"
-              />
-              <div class="p-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
-                  data-translate="filterRes"
-                  >Lakossági</span
-                >
-                <h3 class="text-xl font-bold mb-2" data-translate="ref1Title">
-                  Budai családi ház teljes elektromos felújítása
-                </h3>
-                <p class="text-gray-600" data-translate="ref1Desc">
-                  Komplett elektromos hálózat korszerűsítése, okosotthon
-                  rendszer kiépítése és energiahatékony világítás telepítése.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="masonry-item" data-category="commercial">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://readdy.ai/api/search-image?query=retail%20store%20lighting%20installation%2C%20modern%20shop%20lighting%2C%20commercial%20electrical%20work%2C%20high%20quality%20professional%20photography&width=600&height=800&seq=4&orientation=portrait"
-                alt="Üzlethelyiség világítás"
-                class="w-full h-auto object-cover"
-              />
-              <div class="p-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
-                  data-translate="filterCom"
-                  >Kereskedelmi</span
-                >
-                <h3 class="text-xl font-bold mb-2" data-translate="ref2Title">
-                  Belvárosi butik világítástechnika
-                </h3>
-                <p class="text-gray-600" data-translate="ref2Desc">
-                  Egyedi világítási rendszer tervezése és kivitelezése egy
-                  exkluzív ruhabolt számára, energiatakarékos LED
-                  technológiával.
-                </p>
-              </div>
-            </div>
-          </div>
           <div class="masonry-item" data-category="industrial">
             <div class="bg-white rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://readdy.ai/api/search-image?query=industrial%20electrical%20installation%2C%20factory%20electrical%20panel%2C%20industrial%20wiring%2C%20high%20quality%20professional%20photography&width=600&height=500&seq=5&orientation=landscape"
-                alt="Ipari elektromos rendszer"
+                src="assets/epuletfeluygelet.jpg"
+                alt="Épületfelügyeleti rendszerek"
                 class="w-full h-auto object-cover"
               />
               <div class="p-6">
@@ -487,8 +466,56 @@
                   data-translate="filterInd"
                   >Ipari</span
                 >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref1Title">
+                  Épületfelügyeleti rendszerek
+                </h3>
+                <p class="text-gray-600" data-translate="ref1Desc">
+                  Magyar Telekom Nyrt. részére 47 gépterem, ONE részére 8
+                  gépterem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-category="industrial">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=professional%20soccer%20field%20at%20night%20with%20multiple%20high-powered%20LED%20floodlights%20mounted%20on%20tall%20poles%20surrounding%20the%20field%2C%20intense%20bright%20white%20illumination%20creating%20dramatic%20lighting%20effects%2C%20crisp%20shadows%20on%20perfectly%20maintained%20green%20turf%2C%20modern%20sports%20facility%20with%20state-of-the-art%20lighting%20system%2C%20ultra-realistic%20night%20scene%20with%20multiple%20light%20sources%20casting%20overlapping%20beams%2C%20professional%20sports%20venue%20lighting&width=1920&height=1080&seq=2&orientation=landscape"
+                alt="Sportpálya világítás"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterInd"
+                  >Ipari</span
+                >
+                <h3 class="text-xl font-bold mb-2" data-translate="ref2Title">
+                  Sportpálya, csarnok világítás
+                </h3>
+                <p class="text-gray-600" data-translate="ref2Desc">
+                  BVSC/BEAC asztalitenisz csarnok, teniszpálya, nagyméretű
+                  focipálya illetve uszoda világítási rendszerének kiépítése.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="masonry-item" data-category="residential">
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="assets/Gyengeáramú automatika szekrény.png"
+                alt="Ipari elektromos rendszer"
+                class="w-full h-auto object-cover"
+              />
+              <div class="p-6">
+                <span
+                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
+                  data-translate="filterRes"
+                  >Lakossági</span
+                >
                 <h3 class="text-xl font-bold mb-2" data-translate="ref3Title">
-                  Gyártóüzem elektromos rendszer kiépítése
+                  0,4 kV elektromos rendszer kiépítése
                 </h3>
                 <p class="text-gray-600" data-translate="ref3Desc">
                   Komplett ipari elektromos rendszer tervezése és kivitelezése,
@@ -497,10 +524,11 @@
               </div>
             </div>
           </div>
+
           <div class="masonry-item" data-category="residential">
             <div class="bg-white rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://readdy.ai/api/search-image?query=smart%20home%20installation%2C%20home%20automation%20system%2C%20modern%20house%20electrical%20control%20panel%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=6&orientation=landscape"
+                src="assets/okos_otthon.jpg"
                 alt="Okos otthon rendszer"
                 class="w-full h-auto object-cover"
               />
@@ -516,15 +544,16 @@
                 <p class="text-gray-600" data-translate="ref4Desc">
                   Teljes körű okos otthon rendszer kiépítése, amely magában
                   foglalja a világítás, fűtés, biztonsági rendszerek és
-                  szórakoztató elektronika vezérlését.
+                  szórakoztató elektronika vezérlését 8 db családiházban.
                 </p>
               </div>
             </div>
           </div>
+
           <div class="masonry-item" data-category="commercial">
             <div class="bg-white rounded-lg overflow-hidden shadow-lg">
               <img
-                src="https://readdy.ai/api/search-image?query=office%20building%20electrical%20installation%2C%20commercial%20lighting%2C%20modern%20office%20electrical%20systems%2C%20high%20quality%20professional%20photography&width=600&height=500&seq=7&orientation=landscape"
+                src="assets/Megjelenítő szoftver.png"
                 alt="Irodaház elektromos rendszer"
                 class="w-full h-auto object-cover"
               />
@@ -535,36 +564,10 @@
                   >Kereskedelmi</span
                 >
                 <h3 class="text-xl font-bold mb-2" data-translate="ref5Title">
-                  Irodaház elektromos felújítása
+                  Megjelenítő szoftver fejlesztése
                 </h3>
                 <p class="text-gray-600" data-translate="ref5Desc">
-                  Egy 5 emeletes irodaház teljes elektromos rendszerének
-                  korszerűsítése, energiahatékony megoldásokkal és modern
-                  biztonsági rendszerekkel.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="masonry-item" data-category="industrial">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-              <img
-                src="https://readdy.ai/api/search-image?query=solar%20panel%20installation%20on%20industrial%20roof%2C%20commercial%20solar%20system%2C%20renewable%20energy%20installation%2C%20high%20quality%20professional%20photography&width=600&height=400&seq=8&orientation=landscape"
-                alt="Napelemes rendszer"
-                class="w-full h-auto object-cover"
-              />
-              <div class="p-6">
-                <span
-                  class="inline-block px-3 py-1 text-xs font-semibold bg-blue-100 text-primary rounded-full mb-2"
-                  data-translate="filterInd"
-                  >Ipari</span
-                >
-                <h3 class="text-xl font-bold mb-2" data-translate="ref6Title">
-                  Ipari napelemes rendszer telepítése
-                </h3>
-                <p class="text-gray-600" data-translate="ref6Desc">
-                  100 kW-os napelemes rendszer tervezése és telepítése egy
-                  logisztikai központ tetejére, jelentős energiamegtakarítást
-                  eredményezve.
+                  Épületautomatika, okos otthon részére.
                 </p>
               </div>
             </div>
@@ -583,17 +586,21 @@
             Vegye fel velünk a kapcsolatot, és kérjen ingyenes árajánlatot!
           </p>
         </div>
+
         <div class="flex flex-col lg:flex-row gap-12">
           <div class="lg:w-1/2">
             <form
-              action="https://formspree.io/f/IDE_JON_A_FORM_ID"
+              action="https://formspree.io/f/IDEJONAFORMID"
               method="POST"
               class="bg-white p-8 rounded-lg shadow-lg"
             >
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
-                  <label for="name" class="block text-gray-700 font-medium mb-2"
-                    >Név</label
+                  <label
+                    for="name"
+                    class="block text-gray-700 font-medium mb-2"
+                    data-translate="formName"
+                    >Név*</label
                   >
                   <input
                     type="text"
@@ -607,7 +614,8 @@
                   <label
                     for="email"
                     class="block text-gray-700 font-medium mb-2"
-                    >E-mail</label
+                    data-translate="formEmail"
+                    >E-mail*</label
                   >
                   <input
                     type="email"
@@ -624,7 +632,8 @@
                   <label
                     for="phone"
                     class="block text-gray-700 font-medium mb-2"
-                    >Telefonszám</label
+                    data-translate="formPhone"
+                    >Telefonszám*</label
                   >
                   <input
                     type="tel"
@@ -638,6 +647,7 @@
                   <label
                     for="service"
                     class="block text-gray-700 font-medium mb-2"
+                    data-translate="formService"
                     >Szolgáltatás</label
                   >
                   <select
@@ -646,21 +656,37 @@
                     class="w-full px-4 py-3 border border-gray-300 rounded"
                     required
                   >
-                    <option value="">Válasszon szolgáltatást</option>
-                    <option value="epuletautomatika">
+                    <option value="" data-translate="formServiceOpt">
+                      Válasszon szolgáltatást
+                    </option>
+                    <option value="epuletautomatika" data-translate="srv1Title">
                       Épületautomatika, épületfelügyeleti rendszerek
                     </option>
-                    <option value="villanyszereles">
+                    <option value="tuzjelzo" data-translate="srv7Title">
+                      Tűzjelzőrendszerek
+                    </option>
+                    <option value="villanyszereles" data-translate="srv2Title">
                       Villanyszerelés, elektromos hálózat kiépítése
                     </option>
-                    <option value="karbantartas-hibaelharitas">
+                    <option
+                      value="karbantartas-hibaelharitas"
+                      data-translate="srv3Title"
+                    >
                       Karbantartás, hibaelhárítás
                     </option>
-                    <option value="szoftverfejlesztes">
+                    <option
+                      value="szoftverfejlesztes"
+                      data-translate="srv4Title"
+                    >
                       Épületfelügyeleti megjelenítő szoftver fejlesztése
                     </option>
-                    <option value="vilagitastechnika">Világítástechnika</option>
-                    <option value="pcb-beultetes">
+                    <option
+                      value="vilagitastechnika"
+                      data-translate="srv5Title"
+                    >
+                      Világítástechnika
+                    </option>
+                    <option value="pcb-beultetes" data-translate="srv6Title">
                       Nyomtatott áramkörök beültetése bérmunkában
                     </option>
                   </select>
@@ -671,7 +697,8 @@
                 <label
                   for="message"
                   class="block text-gray-700 font-medium mb-2"
-                  >Üzenet</label
+                  data-translate="formMsg"
+                  >Üzenet*</label
                 >
                 <textarea
                   id="message"
@@ -682,20 +709,36 @@
                 ></textarea>
               </div>
 
+              <div class="mb-6">
+                <label class="custom-checkbox">
+                  <span data-translate="formTerms">Elfogadom az</span>
+                  <a
+                    href="#"
+                    class="text-primary hover:underline"
+                    data-translate="formPrivacy"
+                    >adatvédelmi nyilatkozatot</a
+                  >
+                  <input type="checkbox" name="terms" required />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+
               <input
                 type="hidden"
-                name="_subject"
+                name="subject"
                 value="Új ajánlatkérés az electricbau weboldalról"
               />
 
               <button
                 type="submit"
                 class="bg-primary text-white px-8 py-4 rounded-button text-lg font-medium w-full md:w-auto"
+                data-translate="formSubmit"
               >
                 Üzenet küldése
               </button>
             </form>
           </div>
+
           <div class="lg:w-1/2">
             <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
               <h3 class="text-2xl font-bold mb-6" data-translate="contactInfo">
@@ -716,10 +759,11 @@
                       Cím
                     </h4>
                     <p class="text-gray-600">
-                      H-2040 Budaörs, Gyár u. 2. (BITEP)
+                      H-2040 Budaörs, Gyár u. 2. B/I/TEP
                     </p>
                   </div>
                 </div>
+
                 <div class="flex items-start">
                   <div
                     class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
@@ -736,6 +780,7 @@
                     <p class="text-gray-600">+36-23-418-932</p>
                   </div>
                 </div>
+
                 <div class="flex items-start">
                   <div
                     class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
@@ -752,6 +797,7 @@
                     <p class="text-gray-600">info@electric-bau.hu</p>
                   </div>
                 </div>
+
                 <div class="flex items-start">
                   <div
                     class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mr-4 flex-shrink-0"
@@ -769,7 +815,7 @@
                       Hétfő - Péntek: 8:00 - 17:00
                     </p>
                     <p class="text-gray-600" data-translate="hours2">
-                      Szombat: 9:00 - 13:00
+                      Szombat: Zárva
                     </p>
                     <p class="text-gray-600" data-translate="hours3">
                       Vasárnap: Zárva
@@ -777,6 +823,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="mt-8">
                 <h4
                   class="font-medium text-gray-900 mb-4"
@@ -806,13 +853,14 @@
                 </div>
               </div>
             </div>
+
             <div class="h-80 rounded-lg overflow-hidden shadow-lg">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1928.032633253923!2d18.895764081640884!3d47.47259323217593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741dffabf4ca793%3A0xb6e07b92aef9718d!2zQnVkYcO2cnMsIEd5w6FyIHUuIDIsIDIwNDA!5e0!3m2!1shu!2shu!4v1745755549130!5m2!1shu!2shu"
                 width="800"
                 height="450"
                 style="border: 0"
-                allowfullscreen=""
+                allowfullscreen
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
               >
@@ -828,16 +876,14 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
             <div class="flex items-center mb-6">
-              <p>
-                <img
-                  src="assets/nagylogo.png"
-                  width="150"
-                  height="100"
-                  alt="Logo"
-                />
-              </p>
+              <img
+                src="assets/nagylogo.png"
+                width="150"
+                height="100"
+                alt="Logo"
+              />
               <span
-                class="text-sm text-gray-400 ml-[18px]"
+                class="text-sm text-gray-400 ml-2"
                 data-translate="footerSince"
                 >alapítva 1992</span
               >
@@ -867,6 +913,7 @@
               </a>
             </div>
           </div>
+
           <div>
             <h3 class="text-xl font-bold mb-6" data-translate="quickLinks">
               Gyors linkek
@@ -914,6 +961,7 @@
               </li>
             </ul>
           </div>
+
           <div>
             <h3 class="text-xl font-bold mb-6" data-translate="footerContact">
               Elérhetőségek
@@ -956,6 +1004,7 @@
             </ul>
           </div>
         </div>
+
         <div
           class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
