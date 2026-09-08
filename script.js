@@ -8,7 +8,7 @@ const translations = {
     contact: "Kapcsolat",
     heroTitle: "Üdvözöljük a C. Electricbau Zrt oldalán",
     heroDesc:
-      "Több mint 30 éves tapasztalattal kínálunk professzionális villanyszerelési szolgáltatásokat lakossági és ipari ügyfeleknek egyaránt.",
+      "Több mint 30 éves tapasztalattal kínálunk professzionális épületautomatikai, gyengeáramú, erősáramú komplett kivitelezési szolgáltatásokat ipari és lakossági ügyfeleknek egyaránt.",
     requestQuote: "Ajánlatot kérek",
 
     servicesTitle: "Szolgáltatásaink",
@@ -115,9 +115,7 @@ const translations = {
     contact: "Contact",
     heroTitle: "Welcome to the website of C. Electricbau Zrt.",
     heroDesc:
-      "With over 30 years of experience, we provide professional electrical services for both residential and industrial clients.",
-    requestQuote: "Request Quote",
-
+      "With over 30 years of experience, we provide professional turnkey building automation, low-voltage and high-voltage electrical installation services for both industrial and residential clients.",
     servicesTitle: "Our Services",
     servicesDesc:
       "A focused service portfolio agreed with the client across 7 highlighted areas.",
